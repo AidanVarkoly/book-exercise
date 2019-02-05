@@ -56,14 +56,20 @@ class Book
         return pages;
     }    
     
+    public void length()
+    {
+     if (number == "")
+       number = "ZZZ";  
+    }    
+        public void setRefNumber(String ref)
+    {
+        System.out.print(number);   
+    }
+    
     public void printDetails()
     {
         System.out.print("Title: "+ title + "Author: "+ author + 
         "Pages: " + pages + "Refrence Number: " +number);
-    }
-    public void setRefNumber(String ref)
-    {
-        System.out.print(number);
     }    
 } 
     

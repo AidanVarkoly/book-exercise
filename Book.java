@@ -12,18 +12,21 @@ class Book
     private String author;
     private String title;
     private int pages;
+    private int borrow;
     private String number;
+    boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean course)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         number = "";
+        courseText = course;
     }
 
     // Add the methods here ...
@@ -41,6 +44,17 @@ class Book
     {
         return number;
     }
+    
+    public int getBorrowed()
+    {
+     return borrow;   
+    }    
+    
+    public boolean isCourseText()
+    {
+     return courseText;   
+    }    
+    
     public void printAuthor()
     {
         System.out.print(author);
@@ -61,15 +75,25 @@ class Book
      if (number == "")
        number = "ZZZ";  
     }    
-        public void setRefNumber(String ref)
+    
+    public void borrow()
     {
-        System.out.print(number);   
+     borrow = borrow + 1;   
+    }
+    public void setRefNumber(String ref)
+    {
+     if(ref.length()>3){
+       number=ref;
+    }
+     else
+    {
+     System.out.print("Please make sure that the Ref number is greater than 3 characters");   
+    }    
     }
     
     public void printDetails()
     {
         System.out.print("Title: "+ title + "Author: "+ author + 
-        "Pages: " + pages + "Refrence Number: " +number);
-    }    
-} 
-    
+        "Pages: " + pages + "Refrence Number: " +number + "Times Borrowed: " + borrow + "Course Text: " + courseText);
+    }
+}    

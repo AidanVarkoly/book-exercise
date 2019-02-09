@@ -8,7 +8,6 @@
  */
 class Book
 {
-     // The fields.
     private String author;
     private String title;
     private int pages;
@@ -29,57 +28,57 @@ class Book
         courseText = course;
     }
 
-    // Add the methods here ...
     public String getAuthor()
     {
        return author;
-    }
+    } // end of Author
     
     public String getTitle()
     {
        return title;
-    }
+    } //end of Title
     
     public String getRefNumber()
     {
         return number;
-    }
+    } //end of Number
     
     public int getBorrowed()
     {
      return borrow;   
-    }    
+    } //end of Borrow   
     
     public boolean isCourseText()
     {
      return courseText;   
-    }    
+    } //end of courseText   
     
     public void printAuthor()
     {
         System.out.print(author);
-    }   
+    } //end of Print Author  
     
     public void printTitle()
     {
         System.out.print(title);
-    }
+    } //end of Print Title
     
     public int getPages()
     {
         return pages;
-    }    
+    } //end of Pages   
     
     public void length()
     {
      if (number == "")
        number = "ZZZ";  
-    }    
+    } //end of length   
     
     public void borrow()
     {
      borrow = borrow + 1;   
-    }
+    } //end of Borrow
+    
     public void setRefNumber(String ref)
     {
      if(ref.length()>3){
@@ -89,11 +88,11 @@ class Book
     {
      System.out.print("Please make sure that the Ref number is greater than 3 characters");   
     }    
-    }
+    } //end of SetRef
     
     public void printDetails()
     {
         System.out.print("Title: "+ title + "Author: "+ author + 
         "Pages: " + pages + "Refrence Number: " +number + "Times Borrowed: " + borrow + "Course Text: " + courseText);
-    }
+    } //end of Print Details
 }    
